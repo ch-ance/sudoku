@@ -1,10 +1,12 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 
-const PlayScreen = () => {
+const PlayScreen = (props) => {
+
+    const difficulty = props.navigation.state.params.difficulty;
     return (
         <View>
-            <Text>PlayScreen</Text>
+            <Text>PlayScreen {difficulty}</Text>
         </View>
     );
 };
