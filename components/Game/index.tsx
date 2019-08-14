@@ -5,7 +5,7 @@ import NumberCell from "./NumberCell";
 const Game = ({ difficulty }) => {
     const [currentBoard, setCurrentBoard] = useState([]);
 
-    const sideLength = Math.round(Dimensions.get("window").width) / 9;
+    const sideLength = (Math.round(Dimensions.get("window").width) / 9) - 5;
 
     useEffect(() => {
         fetchNewGame();
@@ -34,6 +34,7 @@ const Game = ({ difficulty }) => {
                             number={cell}
                             sideLength={sideLength}
                             key={index}
+                            index={index}
                         />
                     );
                 })
